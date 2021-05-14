@@ -1,4 +1,3 @@
-const express = require("express");
 const { graphqlHTTP } = require("express-graphql");
 const { buildSchema } = require("graphql");
 const { query } = require("../config/db");
@@ -55,22 +54,3 @@ module.exports = (app) => {
     })
   );
 };
-
-// var app = express();
-// app.use(
-//   "/graphql",
-//   graphqlHTTP({
-//     schema: schema,
-//     rootValue: root,
-//     graphiql: true,
-//   })
-// );
-// app.listen(4000, () => console.log("Now browse to localhost:4000/graphql"));
-
-// const getCategory = (app) => {
-//   return app.use("/api/category/get", async (req, res, next) => {});
-// };
-
-// module.exports = (app) => {
-//   getCategory(app);
-// };
