@@ -32,11 +32,9 @@ app.use(cors());
 
 // api部分
 const category = require("./api/category.js");
-const pokemon = require("./api/pokemon.js");
-// const trainer = require("./api/trainer.js");
+const card = require("./api/card.js");
 category(app);
-pokemon(app);
-// trainer(app);
+card(app);
 
 app.listen(port, () => {
   console.log(`App listening at http://localhost:${port}`);
