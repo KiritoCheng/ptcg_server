@@ -1,5 +1,5 @@
 const { graphqlHTTP } = require("express-graphql");
-const { query } = require("../config/db");
+const { query } = require("../../config/db");
 const { loadSchemaSync } = require("@graphql-tools/load");
 const { GraphQLFileLoader } = require("@graphql-tools/graphql-file-loader");
 const { addResolversToSchema } = require("@graphql-tools/schema");

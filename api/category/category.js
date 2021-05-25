@@ -1,6 +1,6 @@
 const { graphqlHTTP } = require("express-graphql");
 const { buildSchema } = require("graphql");
-const { query } = require("../config/db");
+const { query } = require("../../config/db");
 
 const TABLE_NAME = "CATEGORY";
 const SQL_GET_CATEGORY = `SELECT name FROM ${TABLE_NAME}`;

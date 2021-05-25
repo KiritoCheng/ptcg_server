@@ -1,7 +1,5 @@
-interface res {
-  res: Int
-  errorInfo: String
-}
+#import res from '../res.graphql'
+
 type powerTypes {
   "技能费用"
   cost: String
@@ -49,7 +47,7 @@ type trainerTypes {
   name: String
   "类型"
   t_type: String
-  "影响"
+  "效果"
   effect: String
   "原画"
   img: String

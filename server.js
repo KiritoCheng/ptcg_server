@@ -31,8 +31,8 @@ app.use(cors());
 // });
 
 // api部分
-const category = require("./api/category.js");
-const card = require("./api/card.js");
+const category = require("./api/category/category.js");
+const card = require("./api/card/card.js");
 category(app);
 card(app);
 
