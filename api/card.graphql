@@ -40,6 +40,20 @@ type pokemonTypes {
   "原画"
   img: String
 }
+type trainerTypes {
+  id: Int
+  tid: String
+  "分类"
+  category: String
+  "名字"
+  name: String
+  "类型"
+  t_type: String
+  "影响"
+  effect: String
+  "原画"
+  img: String
+}
 type trainerRes implements res {
   res: Int
   errorInfo: String
