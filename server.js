@@ -51,8 +51,10 @@ const httpsOption = {
 //   ca: fs.readFileSync('/path/to/chain.pem')
 // }
 
-http.createServer(app).listen(80);
-https.createServer(httpsOption, app).listen(443);
+// http.createServer(app).listen(80);
+https.createServer(httpsOption, app).listen(port, () => {
+  console.log(`App listening at http://localhost:${port}`);
+});
 
 // app.listen(port, () => {
 //   console.log(`App listening at http://localhost:${port}`);
