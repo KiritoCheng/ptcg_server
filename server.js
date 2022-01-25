@@ -4,6 +4,9 @@ const bodyParser = require("body-parser");
 const compression = require("compression");
 const cors = require("cors");
 const path = require("path");
+const http = require("http");
+const https = require("https");
+const fs = require("fs");
 
 const app = express();
 const port = 4000;
@@ -36,6 +39,21 @@ const card = require("./api/card/card.js");
 category(app);
 card(app);
 
-app.listen(port, () => {
-  console.log(`App listening at http://localhost:${port}`);
-});
+// https 配置
+const httpsOption = {
+  key: fs.readFileSync("/path/ssl/kiritosa.com/key.pem"),
+  cert: fs.readFileSync("/path/ssl/kiritosa.com/fullchain.pem"),
+};
+
+// var options = {
+//   key: fs.readFileSync('/path/to/privkey.pem'),
+//   cert: fs.readFileSync('/path/to/fullchain.pem'),
+//   ca: fs.readFileSync('/path/to/chain.pem')
+// }
+
+http.createServer(app).listen(80);
+https.createServer(httpsOption, app).listen(443);
+
+// app.listen(port, () => {
+//   console.log(`App listening at http://localhost:${port}`);
+// });

@@ -1,7 +1,8 @@
 const mysql = require("mysql");
 
 const userInfo = {
-  host: "localhost",
+  // host: "localhost",
+  host: "136.244.66.213",
   user: "root",
   password: "Kirito123",
   port: "3306",

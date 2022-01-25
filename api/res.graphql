@@ -1,4 +1,6 @@
 interface res {
+  "0正常, -1异常"
   res: Int
+  "异常信息"
   errorInfo: String
 }
